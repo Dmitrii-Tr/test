@@ -1,0 +1,569 @@
+@font-face {
+	font-family: "TTNorms";
+	src: url(/fonts/TTNorms-Regular.woff2) format("woff2"), url(/fonts/TTNorms-Regular.woff) format("woff");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "PFRegalDisplayPro";
+	src: url(/fonts/PFRegalDisplayPro-MediumItalic.woff2) format("woff2"),
+		url(/fonts/PFRegalDisplayPro-MediumItalic.woff) format("woff");
+	font-weight: 400;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a {
+	color: #242e31;
+	text-decoration: none;
+	font-weight: 400;
+}
+li {
+	list-style: none;
+}
+
+body {
+	font-family: "TTNorms", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	background-color: #fff;
+}
+.container {
+	max-width: 1120px;
+}
+.navbar {
+	background-color: #fff;
+	border-bottom: solid 1px #e5e5e5;
+}
+.navbar-brand {
+	margin: 0px 0px 0px 24px;
+	z-index: 5;
+}
+.navbarLogo {
+	width: 81px;
+	height: 14px;
+}
+.navbarLogo:hover {
+	-webkit-filter: saturate(0) brightness(13%);
+	filter: saturate(0) brightness(13%);
+}
+.navbar-expand-lg .navbar-collapse {
+	margin: 0px 0px -5px 104px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #21242e;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+	color: #d0bc7a;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+	padding-right: 16px;
+}
+
+.navBtn {
+	border: none;
+	background: transparent;
+	margin: 8px 0px 0px 0px;
+}
+.navBtn:hover {
+	color: #d0bc7a;
+}
+
+.userInfo {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 0px 34px 0px -10px;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+}
+.iconLink {
+	width: 16px;
+	height: 16px;
+}
+.headerNav {
+	position: absolute;
+	right: 36px;
+	display: block;
+}
+.headerMenu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	z-index: 2;
+}
+.headerMenu li {
+	margin: 0px 0px 16px -30px;
+	color: #21242e;
+	font-size: 16px;
+	text-decoration: none;
+}
+.headerNav {
+	display: block;
+	position: absolute;
+	top: 55px;
+	left: 0;
+	background: rgb(245, 246, 246);
+	width: 100%;
+	-webkit-box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.37);
+	box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.37);
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	left: -200%;
+}
+.headerMenu {
+	display: block;
+}
+.headerNav.open {
+	left: 0;
+	top: 0;
+	z-index: 4;
+	padding: 240px 40px;
+}
+.menuLink,
+.menuTitle,
+.menuLink > span {
+	color: #21242e;
+	white-space: nowrap;
+}
+.menuLink > span:hover {
+	color: #d0bc7a;
+}
+.menuTitle {
+	font-size: 24px;
+}
+.menuLink > .phoneIcon,
+.menuLink > .emailIcon,
+.menuLink > .watchIcon,
+.menuLink > .navIcon {
+	fill: #21242e;
+	margin-bottom: 2px;
+}
+.menuBurger {
+	position: relative;
+	width: 20px;
+	height: 35px;
+	display: block;
+	margin: 20px 0px 0px 10px;
+	z-index: 5;
+	cursor: pointer;
+}
+.menuBurger span,
+.menuBurger:after,
+.menuBurger:before {
+	height: 2px;
+	width: 100%;
+	position: absolute;
+	background: #515758;
+	margin: 0 auto;
+}
+.menuBurger:hover::after,
+.menuBurger:hover:before {
+	background-color: #d0bc7a;
+}
+.menuBurger span {
+	top: 16px;
+	background: #fff;
+}
+.menuBurger:after,
+.menuBurger:before {
+	content: "";
+}
+.menuBurger:after {
+	bottom: 15px;
+}
+.menuBurger:before {
+	top: 13px;
+}
+.menuBurger.open span {
+	opacity: 0;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+.menuBurger.open:before {
+	-webkit-transform: rotate(38deg);
+	transform: rotate(38deg);
+	top: 17px;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+.menuBurger.open:after {
+	-webkit-transform: rotate(-38deg);
+	transform: rotate(-38deg);
+	bottom: 16px;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+.headerButton {
+	margin: -20px 15px 3px -30px;
+}
+.phoneLink {
+	margin: -20px 42px 0px 20px;
+}
+.headerIcon {
+	margin-right: 18px;
+}
+.headerIcon:hover {
+	-webkit-filter: saturate(0) brightness(13%);
+	filter: saturate(0) brightness(13%);
+}
+.phoneLink {
+	color: #d0bc7a;
+}
+.phoneLink:hover {
+	color: #21242e;
+}
+.headerIcon.phoneIcon {
+	margin-right: 10px;
+}
+.user {
+	margin-top: 12px;
+}
+.userNav {
+	position: relative;
+	padding: 104px 0px 0px 40px;
+	margin: 0px 45px 0px 0px;
+}
+.userNav li {
+	letter-spacing: 2px;
+	margin-bottom: 15px;
+}
+.userLink {
+	line-height: 24px;
+	white-space: nowrap;
+}
+ul.navList > li:first-child > a {
+	color: #d0bc7a;
+}
+.userLink:hover {
+	color: #d0bc7a;
+}
+.profileTitle {
+	font-size: 80px;
+	padding: 88px 0px 20px 96px;
+}
+.profileInfo {
+	margin: 0px 0px 0px 107px;
+}
+.profileSubtitle {
+	font-size: 24px;
+	color: #21242e;
+}
+.divider {
+	margin: -12px 0px -48px 0px;
+}
+.line {
+	margin: 0px 0px 0px -107px;
+}
+hr {
+	border-top: 1px solid #21242e;
+	margin-right: -51%;
+}
+.bottomLine {
+	margin: 48px 0px 0px 0px;
+	padding: 0;
+}
+.bottomLine hr {
+	width: 100%;
+}
+.password {
+	position: relative;
+}
+.passwordControl {
+	position: absolute;
+	top: 45px;
+	right: 10px;
+	width: 25px;
+	height: 20px;
+	border: none;
+	background: transparent;
+}
+.buttonItem {
+	margin-top: 80px;
+}
+.viewIcon {
+	display: inline-block;
+	fill: transparent;
+	stroke: #606060;
+}
+.viewIcon:hover {
+	stroke: #000000;
+}
+.noviewIcon {
+	display: none;
+}
+.passwordControl.view > .viewIcon {
+	display: none;
+}
+.passwordControl.view > .noviewIcon {
+	display: inline-block;
+	fill: transparent;
+	stroke: #c2c2c2;
+}
+.passwordControl.view > .noviewIcon:hover {
+	stroke: #676767;
+}
+.noviewIcon,
+.viewIcon {
+	width: 24px;
+	height: 24px;
+	position: relative;
+}
+.form-control {
+	border: none;
+	background: #f7f7f7;
+	height: 56px;
+	padding: 0px 0px 0px 16px;
+	color: #21242e;
+}
+.d-flex {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+}
+.form-group label {
+	color: #c1c3c8;
+}
+.userLink:active {
+	color: #d0bc7a;
+}
+.btn-lg {
+	font-size: 16px;
+	height: 56px;
+}
+.trendsTitle {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin: 100px 0px 42px 0px;
+}
+.titleText {
+	font-size: 48px;
+	white-space: nowrap;
+}
+.titleText span {
+	color: #d0bc7a;
+}
+.catalogLink {
+	margin-left: auto;
+	font-size: 16px;
+	color: #21242e;
+}
+.catalogLink:hover {
+	color: #d0bc7a;
+}
+.arrowIcon {
+	margin: 0px 0px 3px 0px;
+	padding: 0px 0px 2px 8px;
+	width: 23px;
+	height: 20px;
+	fill: transparent;
+	stroke: #000;
+}
+.arrowIcon:hover {
+	stroke: #d0bc7a;
+}
+.productCard {
+	width: 256px;
+	border-radius: 8px;
+	background: #f7f7f7;
+	margin-bottom: 72px;
+}
+.productView {
+	position: relative;
+	padding-bottom: 16px;
+}
+.productLink {
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	top: 45px;
+	left: 0;
+	z-index: 1;
+}
+.productCard:hover {
+	border: 1px solid #b6b6b6;
+}
+.productImg {
+	margin: -48px 0px 0px 15px;
+}
+.itemDiscount {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: baseline;
+	-ms-flex-align: baseline;
+	align-items: baseline;
+}
+.sale {
+	background: #eb5757;
+	color: #ffffff;
+	padding: 4px 12px 6px 12px;
+	border-radius: 25px;
+	margin: 26px 0px 0px 26px;
+}
+.likeBtn {
+	border: none;
+	background: transparent;
+	margin: 0px 26px 0px auto;
+	z-index: 3;
+}
+.likeIcon {
+	width: 20px;
+	height: 20px;
+	fill: #e4e4e4;
+}
+.likeIcon:hover {
+	fill: #21242e;
+}
+.productTitle {
+	font-family: "PFRegalDisplayPro";
+	font-size: 18px;
+	white-space: nowrap;
+	padding: 24px 0px 0px 24px;
+}
+.productSubtitle {
+	font-size: 14px;
+	white-space: nowrap;
+	padding: 0px 0px 0px 24px;
+}
+.productDetails {
+	border-top: 12px solid #c08d74;
+}
+
+.item-1 > .productDetails {
+	border-top: 12px solid #c07474;
+}
+.item-2 > .productDetails {
+	border-top: 12px solid #ea976f;
+}
+.item-3 > .productDetails {
+	border-top: 12px solid #c08d74;
+}
+.productSize {
+	padding: 0px 0px 0px 24px;
+	margin-bottom: 8px;
+}
+.productPrice {
+	font-family: "PFRegalDisplayPro";
+	font-size: 18px;
+	font-style: italic;
+	padding: 0px 0px 0px 24px;
+}
+.productPrice span {
+	margin-right: 20px;
+}
+.oldPrice {
+	text-decoration: line-through;
+	color: #bebebe;
+}
+.footerBlock {
+	background: rgb(41, 41, 41);
+}
+ul.footerItems li:first-child,
+ul.headerMenu li:first-child {
+	margin-bottom: 24px;
+}
+
+.titleLink {
+	font-size: 24px;
+	color: #ffffff;
+}
+
+ul.footerItems li {
+	margin: 0px 0px 16px -30px;
+}
+
+.footerLink {
+	color: #ffffff;
+	font-size: 16px;
+	white-space: nowrap;
+}
+.titleLink:hover,
+.footerLink:hover,
+.menuTitle:hover,
+.menuLink:hover {
+	color: #d0bc7a;
+}
+.phoneIcon,
+.emailIcon,
+.watchIcon,
+.navIcon {
+	width: 17px;
+	height: 16px;
+	fill: #ffffff;
+	margin-bottom: 2px;
+}
+
+.footerLink:hover .navIcon,
+.footerLink:hover .emailIcon,
+.footerLink:hover .watchIcon,
+.footerLink:hover .phoneIcon,
+.menuLink:hover .navIcon,
+.menuLink:hover .emailIcon,
+.menuLink:hover .watchIcon,
+.menuLink:hover .phoneIcon,
+.menuLink:hover span {
+	fill: #d0bc7a;
+	color: #d0bc7a;
+}
+
+.vkIcon,
+.fbIcon,
+.igIcon {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+}
+.vkIcon:hover,
+.fbIcon:hover,
+.igIcon:hover {
+	stroke: #d0bc7a;
+}
+.cedroIcon {
+	width: 13px;
+	height: 11px;
+}
+.footerNote,
+.cedroLink > span {
+	color: #ffffff;
+	font-size: 14px;
+}
+.row.d-flex {
+	padding: 56px 0 32px 0;
+}
+
+.footerLine > hr {
+	border-top: 1px solid #ffffff;
+	margin-right: 0%;
+	margin-left: 0%;
+}
+
+.footerInfo {
+	-webkit-box-align: baseline;
+	-ms-flex-align: baseline;
+	align-items: baseline;
+}
+.rightsLink > span {
+	color: #ffffff;
+}
+.footerRights {
+	white-space: nowrap;
+}
+.socialItem {
+	margin-right: 8px;
+}
+.cedroLink {
+	margin-left: auto;
+}
+.footerIcons {
+	padding: 2px;
+}
+.linkDivider {
+	display: block;
+	margin-left: 20px;
+}
